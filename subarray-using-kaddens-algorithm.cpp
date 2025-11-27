@@ -21,14 +21,25 @@ int main(){
 
 
         // broute force some optimized approach but not best 
+        // int maxSum = INT_MIN; 
+        // for(int st=0; st<n; st++){
+        //     int currSum = 0; 
+        //     for(int end=st;  end<n; end++){
+        //         currSum += arr1[end]; 
+        //         maxSum = max(currSum, maxSum); 
+        //     }
+        // }
+        // cout<<maxSum<<endl; 
+
         int maxSum = INT_MIN; 
-        for(int st=0; st<n; st++){
-            int currSum = 0; 
-            for(int end=st;  end<n; end++){
-                currSum += arr1[end]; 
-                maxSum = max(currSum, maxSum); 
+        int currSum = 0; 
+        for(int i=0; i<n; i++){
+            currSum += arr1[i]; 
+            maxSum = max(currSum, maxSum); 
+            if(currSum<0){
+                currSum=0; 
             }
         }
-        cout<<maxSum<<endl; 
+        cout<<maxSum<<endl;
     return 0;
 } 
