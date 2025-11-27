@@ -31,6 +31,7 @@ int main(){
         // }
         // cout<<maxSum<<endl; 
 
+        // this is optimized version using kadanes algorithm
         int maxSum = INT_MIN; 
         int currSum = 0; 
         for(int i=0; i<n; i++){
